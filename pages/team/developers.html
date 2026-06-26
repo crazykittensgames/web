@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team — Crazy Kittens</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="icon" type="image/x-icon" href="../../assets/icons/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"> <!-- Iconos duros de pelotas -->
+</head>
+<body data-page-title="dev.title">
+
+<!-- navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="navbar-logo">
+      <img src="assets/images/logo.png" alt="Crazy Kittens logo">
+      Crazy Kittens
+    </a>
+    
+    <ul class="navbar-links" id="navLinks">
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="../../pages/proyectErika.html" data-i18n="nav.erika">Erika</a></li>
+        <li><a href="../../pages/developers.html" data-i18n="nav.dev">Team</a></li>
+        <li><a href="index.html#socials" data-i18n="nav.socials">Socials</a></li>
+      
+      <!-- Language selector -->
+      <li>
+        <div class="navbar-right">
+          <div class="lang-select-wrap">
+            <select class="lang-select" aria-label="Language"></select>
+          </div>
+          <button class="nav-toggle" id="navToggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </li>
+    </ul>
+
+  </nav>
+  
+  <header class="page-header">
+    <h1 data-i18n="dev.header">🐾 The Developers</h1>
+    <p data-i18n="dev.header_sub">Three friends, one dream — building worlds together.</p>
+  </header>
+
+  <div class="section">
+    <div class="dev-page-grid">
+
+      <div class="member-card">
+        <div class="member-banner member-banner-1">
+          <div class="member-avatar-wrap"><div class="member-avatar">🐱</div></div>
+        </div>
+        <div class="member-info">
+          <h2>Kiyo</h2>
+          <p class="member-role" data-i18n="dev.kiyo_role">Lead Developer</p>
+          <p data-i18n="dev.kiyo_bio">Kiyo is the one who turns ideas into reality.</p>
+          <div class="member-socials">
+            <a href="#" class="member-social-link" title="Twitter / X">𝕏</a>
+            <a href="#" class="member-social-link" title="GitHub">💻</a>
+            <a href="#" class="member-social-link" title="itch.io">🎮</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <div class="member-banner member-banner-2">
+          <div class="member-avatar-wrap"><div class="member-avatar">🎨</div></div>
+        </div>
+        <div class="member-info">
+          <h2>IviLegend</h2>
+          <p class="member-role" data-i18n="dev.ivi_role">Art &amp; Visual Design</p>
+          <p data-i18n="dev.ivi_bio">IviLegend is the visual soul of Crazy Kittens.</p>
+          <div class="member-socials">
+            <a href="#" class="member-social-link" title="Twitter / X">𝕏</a>
+            <a href="#" class="member-social-link" title="TikTok">🎵</a>
+            <a href="#" class="member-social-link" title="Portfolio">🖼️</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <div class="member-banner member-banner-3">
+          <div class="member-avatar-wrap"><div class="member-avatar">✍️</div></div>
+        </div>
+        <div class="member-info">
+          <h2>Kavsnai</h2>
+          <p class="member-role" data-i18n="dev.kav_role">Narrative &amp; Sound</p>
+          <p data-i18n="dev.kav_bio">Kavsnai gives the games their voice.</p>
+          <div class="member-socials">
+            <a href="#" class="member-social-link" title="Twitter / X">𝕏</a>
+            <a href="#" class="member-social-link" title="YouTube">📺</a>
+            <a href="#" class="member-social-link" title="TikTok">🎵</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="margin-top:3rem; background:linear-gradient(135deg,#FFD6E7,#FFB6C8); border-radius:var(--radius); padding:2.5rem 2rem; text-align:center;">
+      <h3 style="font-family:'Fredoka One',cursive; font-size:1.6rem; color:var(--text-dark); margin-bottom:0.6rem;" data-i18n="dev.blurb_h">We're just getting started 🌸</h3>
+      <p style="color:var(--text-soft); max-width:540px; margin:0 auto; line-height:1.65; font-size:0.97rem;" data-i18n="dev.blurb_p">Crazy Kittens was born out of a shared love for story-rich indie games.</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">🐾 Crazy Kittens</span>
+        <p data-i18n="footer.brand_p">A tiny indie game studio powered by passion, late nights, and too much coffee.</p>
+      </div>
+    
+      <div class="footer-col">
+        <h4 data-i18n="footer.connect_h">Connect</h4>
+        <ul>
+          <li><a href="https://www.tiktok.com/@crazykittensgames" data-i18n="footer.tiktok">TikTok</a></li>
+          <li><a href="https://x.com/crazykittens_" data-i18n="footer.twitter">X</a></li>
+          <li><a href="https://www.youtube.com/@CrazyKittensGames" data-i18n="footer.youtube">YouTube</a></li>
+          <li><a href="https://itch.io/profile/crazykittens" data-i18n="footer.itchio">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-i18n="footer.copy">© Crazy Kittens 2026. All rights reserved.</p>
+      <div class="footer-paws">🐾🐾🐾</div>
+    </div>
+  </footer>
+
+  <script src="../../i18n.js"></script>
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => { toggle.classList.toggle('open'); links.classList.toggle('open'); });
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { toggle.classList.remove('open'); links.classList.remove('open'); }));
+  </script>
+  
+</body>
+</html>

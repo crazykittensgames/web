@@ -1,24 +1,320 @@
 <!DOCTYPE html>
-
+<html lang="es">
 <head>
-    <title>Crazy Kittens</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="res/icons/logo.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crazy Kittens</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"> <!-- Iconos duros de pelotas -->
+
+  <!-- Cuando quieras utilizar sus inconos, en este enlace: https://icons.getbootstrap.com/ , entras en el que quieras poner y copiar el codigo html que tiene al lado-->
+
 </head>
 
-<body>
-    <div class="header">
-        <a href="index.html" class="logo">
-            <img src="res/images/cat.png">
-        </a>
+<!-- Toda la información que esta con el atributo  "data-i18n" no necesita tener texto, pero lo dejo para localizar todo mejor
+ Debes de llamar a la función de traducción para cada elemento que te sirva más -->
+<body data-page-title="index.title">
+
+  <!-- navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="navbar-logo">
+      <img src="assets/images/logo.png" alt="Crazy Kittens logo">
+      Crazy Kittens
+    </a>
+    
+    <ul class="navbar-links" id="navLinks">
+        <li><a href="index.html" data-i18n="nav.home">Inicio</a></li>
+        <li><a href="/pages/games/proyectErika.html" data-i18n="nav.erika">Project Erika</a></li>
+        <li><a href="/pages/team/developers.html" data-i18n="nav.dev">Equipo</a></li>
+        <li><a href="index.html#socials" data-i18n="nav.socials">Redes</a></li>
+      
+      <!-- Language selector -->
+      <li>
+        <div class="lang-select-wrap" id="langWrap">
+          <button class="lang-toggle-btn" id="langToggleBtn" aria-label="Cambiar idioma">
+            <i class="bi bi-translate"></i>
+          </button>
+          <ul class="lang-dropdown" id="langDropdown">
+            <li><button type="button" data-lang="es">Español</button></li>
+            <li><button type="button" data-lang="en">English</button></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+
+  </nav>
+
+  <!-- splashart proyect Erika -->
+  <div class="hero-cover">
+    <img src="assets/images/portada_vertical.jpg" data-i18n-alt="index.cover_alt" alt="Project Erika">
+    <div class="hero-cover-overlay"></div>
+  </div>
+
+  <!-- intro bienvenida-->
+  <div class="intro-strip">
+    <h2 data-i18n-html="index.welcome">Bienvenidos a Crazy Kittens</h2>
+    <p data-i18n-html="index.welcome_sub">Gracias a todos por el interés, apoyo y la confianza en nosotros.</p>
+  </div>
+
+  <!-- about us -->
+  <div class="section">
+    <div class="studio-panel">
+
+      <!--Icóno iteractivo-->
+      <div class="studio-panel-left">
+        <div class="studio-panel-logo">
+          <div class="logo-container" id="logoContainer">
+            <img src="assets/images/logo.png" alt="Crazy Kittens logo" class="logo-base">
+            <img src="assets/images/logo_whiskers.png" alt="" class="logo-whiskers" aria-hidden="true">
+          </div>
+        </div>
+      </div>
+
+      <div class="studio-panel-right">
+        <h2 data-i18n="studio.panel_title">Crazy Kittens</h2>
+        <div class="studio-panel-divider"></div>
+        <p data-i18n-html="studio.about_p1"></p>
+        <p data-i18n="studio.about_p2"></p>
+
+        <div class="studio-stats-grid">
+          <div class="studio-stat">
+            <div class="studio-stat-num">3</div>
+            <div class="studio-stat-lbl" data-i18n="studio.stat_members">Miembros</div>
+          </div>
+          <div class="studio-stat">
+            <div class="studio-stat-num">1</div>
+            <div class="studio-stat-lbl" data-i18n="studio.stat_game_in_dev">En desarrollo</div>
+          </div>
+          <div class="studio-stat studio-stat-wide">
+            <div class="studio-stat-lbl" data-i18n="studio.stat_founded">Fundado en </div>
+            <div class="studio-stat-num">2026</div>
+          </div>
+        </div>
+
+        <a href="/pages/team/developers.html" class="btn" data-i18n="index.erika_more_btn">Conocenos</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- game information -->
+  <div class="section">
+    <div class="game-spotlight">
+      <div class="game-spotlight-img"><img src="assets/images/portada_vertical.jpg" alt="Proyecto Erika"></div>
+      <div class="game-spotlight-body">
+        
+        <span class="game-tag" data-i18n="erika.badge_dev">Desarrollandose</span>
+        <h2 data-i18n="nav.erika">Proyecto Erika</h2>
+
+        <p data-i18n-html="erika.about_p1"></p>
+        <hr class="spotlight-divider">
+        <p data-i18n-html="erika.about_p2"></p>
+
+        <div class="badge-row">
+          <span class="badge" data-i18n="erika.badge_etq1"></span>
+          <span class="badge" data-i18n="erika.badge_etq2"></span>
+          <span class="badge" data-i18n="erika.badge_etq3"></span>
+        </div>
+
+        <div class="spotlight-actions">
+          <a href="pages/games/proyectErika.html" class="btn" data-i18n="index.erika_more_btn">Saber más →</a>
+          <a href="https://www.youtube.com/@CrazyKittensGames" class="btn btn-outline" data-i18n="erika.trailer_btn"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- screenshots de Project Erika -->
+  <div class="section">
+    <div class="section-divider section-divider--center"></div>
+    <div class="screenshots-grid">
+      <div class="screenshot-slot"><div class="photo-clip"></div><img src="assets/images/portada_vertical.jpg" alt="Captura 1"></div>
+      <div class="screenshot-slot"><div class="photo-clip"></div><img src="assets/images/portada_vertical.jpg" alt="Captura 2"></div>
+      <div class="screenshot-slot"><div class="photo-clip"></div><img src="assets/images/portada_vertical.jpg" alt="Captura 3"></div>
+      <div class="screenshot-slot"><div class="photo-clip"></div><img src="assets/images/portada_vertical.jpg" alt="Captura 4"></div>
+    </div>
+    <div style="text-align:center; margin-top:2rem;">
+      <a href="pages/proyectErika.html" class="btn btn-outline" data-i18n="index.erika_gallery_btn">Ver todas las capturas</a>
+    </div>
+  </div>
+
+  <!-- socials -->
+  <section class="social-section" id="socials">
+    <h2 data-i18n="index.socials_title">Encuentranos en las redes sociales</h2>
+    <p data-i18n="index.socials_sub">Estaté al tanto y conocenos mejor en nuestras redes sociales.</p>
+    <div class="social-links">
+      <a href="https://www.tiktok.com/@crazykittensgames" class="social-pill"><i class="bi bi-tiktok"></i></a>
+      <a href="https://x.com/crazykittens_" class="social-pill"><i class="bi bi-twitter-x"></i></a>
+      <a href="https://www.youtube.com/@CrazyKittensGames" class="social-pill"><i class="bi bi-youtube"></i></a>
+      <a href="https://www.instagram.com/crazykittensgames" class="social-pill"><i class="bi bi-instagram"></i></a>
+    </div>
+  </section>
+
+
+  <!-- latest news -->
+  <div class="section">
+    <h2 class="section-title" data-i18n="index.news_title">Últimas noticias</h2>
+    <div class="section-divider"></div>
+    <div class="news-grid">
+
+      <div class="news-card">
+        <div class="news-card-img"><i class="bi bi-image-alt"></i></div>
+        <div class="news-card-body">
+          <p class="news-card-date" data-i18n="index.news3_date">June 2026</p>
+          <h3 data-i18n="index.news3_h">Nuestra primera página web</h3>
+          <p data-i18n="index.news3_p">¡Bienvenidos a nuestra nueva página web! Aquí encontrarás de primera mano toda la información oficial sobre nuestros proyectos y el equipo detrás de Crazy Kittens.</p>
+        </div>
+      </div>
+
+      <div class="news-card">
+        <div class="news-card-img"><i class="bi bi-image-alt"></i></div>
+        <div class="news-card-body">
+          <p class="news-card-date" data-i18n="index.news1_date">Julio 2026</p>
+          <h3 data-i18n="index.news1_h">Primer trailer de Proyecto Erika</h3>
+          <p data-i18n="index.news1_p">Oficialmente, se ha lanzado el primer trailer de Proyecto Erika, en el que por primera vez se deja echar un vistazo al mundo y su estética.</p>
+        </div>
+      </div>
+
+      <div class="news-card">
+        <div class="news-card-img"><i class="bi bi-image-alt"></i></div>
+        <div class="news-card-body">
+          <p class="news-card-date" data-i18n="index.news1_date">Julio 2026</p> <!-- Tiene la misma refe de traducción ya que es el mismo contenido-->
+          <h3 data-i18n="index.news2_h">¡Ya estamos en Steam!</h3>
+          <p data-i18n="index.news2_p">Despues de mucho trabajo, por fin podemos anunciarte que estamos en Steam!. Ya es posible encontarnos y añadirnos a tu wishlist.</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- formas de apoyarnos -->
+  <div class="section support-section">
+    <h2 class="section-title" data-i18n="spread.other_h">Formas de apoyarnos</h2>
+    <div class="section-divider"></div>
+    <div class="support-grid">
+      <div class="support-card">
+        <div class="support-icon"><i class="bi bi-bell"></i></div>
+        <h3 data-i18n="spread.w1_h">Añadenos en tu wishlist</h3>
+        <p data-i18n="spread.w1_p">Nos ayudará mucho a saber que estais esperando los juegos con tantas ganas como nosotros.</p>
+        <a href="https://store.steampowered.com" class="btn btn-outline btn-sm" data-i18n="spread.w1_btn">Agranda tu Wishlist</a>
+      </div>
+      <div class="support-card">
+        <div class="support-icon"><i class="bi bi-person-plus"></i></div>
+        <h3 data-i18n="spread.w2_h">Siguenos en redes sociales</h3>
+        <p data-i18n="spread.w2_p">Podrás estar al tanto de cada avance y novedad de los juegos.</p>
+        <a href="index.html#socials" class="btn btn-outline btn-sm" data-i18n="spread.w2_btn">Ver nuestras redes</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+
+      <div class="footer-col">
+        <h4 data-i18n="footer.nav_h">Navegar</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Inicio</a></li>
+          <li><a href="/pages/games/proyectErika.html" data-i18n="nav.erika">Proyecto Erika</a></li>
+          <li><a href="/pages/team/developers.html" data-i18n="nav.team">Equipo</a></li>
+          <li><a href="index.html#socials" data-i18n="nav.socials">Redes</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer.nav_h2">Juegos</h4>
+        <ul>
+          <li><a href="/pages/games/proyectErika.html" data-i18n="nav.erika">Proyect Erika</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col--socials">
+        <h4 data-i18n="footer.connect_h">Encuéntranos</h4>
+        <div class="footer-social-row">
+          <a href="https://www.tiktok.com/@crazykittensgames" class="footer-social-link"><i class="bi bi-tiktok"></i></a>
+          <a href="https://x.com/crazykittens_" class="footer-social-link"><i class="bi bi-twitter-x"></i></a>
+          <a href="https://www.youtube.com/@CrazyKittensGames" class="footer-social-link"><i class="bi bi-youtube"></i></a>
+          <a href="https://www.instagram.com/crazykittensgames" class="footer-social-link"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+
     </div>
 
-    <h1>OOPIE GOOPY</h1>
-    <p>Hola, prueba</p>
-    <a href="games/">Juegos</a>
-    <a href="team/">Equipo</a>
+    <div class="footer-bottom">
+      <p data-i18n="footer.copy">© Crazy Kittens 2026. All rights reserved.</p>
+    </div>
+  </footer>
 
-    <footer class="footer">
-        <p>&copy; Crazy Kittens 2026. All rights reserved.</p>
-    </footer>
+  <script src="i18n.js"></script>
+  
+  <script>
+
+    // Menú hamburguesa (solo si existe el botón en el HTML)
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    if (toggle && links) {
+      toggle.addEventListener('click', () => {
+        toggle.classList.toggle('open');
+        links.classList.toggle('open');
+      });
+      links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        toggle.classList.remove('open');
+        links.classList.remove('open');
+      }));
+    }
+
+    // Dropdown de idioma
+    const langBtn      = document.getElementById('langToggleBtn');
+    const langDropdown = document.getElementById('langDropdown');
+
+    if (langBtn && langDropdown) {
+      langBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langBtn.classList.toggle('open');
+        langDropdown.classList.toggle('open');
+      });
+
+      langDropdown.querySelectorAll('button[data-lang]').forEach(opt => {
+        opt.addEventListener('click', () => {
+          const lang = opt.dataset.lang;
+          if (typeof setLang === 'function') setLang(lang); // ajusta el nombre si tu i18n.js usa otro
+          langBtn.classList.remove('open');
+          langDropdown.classList.remove('open');
+        });
+      });
+
+      // cerrar el dropdown si se hace click fuera
+      document.addEventListener('click', () => {
+        langBtn.classList.remove('open');
+        langDropdown.classList.remove('open');
+      });
+    }
+
+    function handleNewsletter(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('button');
+      btn.textContent = t('index.nl_done', getLang());
+      btn.disabled = true;
+      e.target.querySelector('input').value = '';
+    }
+  </script>
+
+  <!-- Logo Animation -->
+  <script>
+    const container = document.getElementById('logoContainer');
+    if (container) {
+      const whiskers = container.querySelector('.logo-whiskers');
+      container.addEventListener('click', () => {
+        whiskers.classList.remove('wiggle');
+        void whiskers.offsetWidth;
+        whiskers.classList.add('wiggle');
+      });
+      whiskers.addEventListener('animationend', () => {
+        whiskers.classList.remove('wiggle');
+      });
+    }
+  </script>
+
 </body>
+</html>
